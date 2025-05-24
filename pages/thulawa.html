@@ -9,6 +9,7 @@
     <link rel="icon" href="../images/tabicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/thulawa.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
@@ -16,14 +17,14 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>StreamFlow</h2>
+                    <h2>Thulawa</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
                     <li><a href="../index.html#features" class="nav-link">Features</a></li>
-                    <li><a href="../demo.html" class="nav-link demo-link">Demo</a></li>
-                    <li><a href="../pages/about.html" class="nav-link">About</a></li>
-                    <li><a href="../pages/contacts.html" class="nav-link">Contact</a></li>
+                    <li><a href="demo.html" class="nav-link">Demo</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -154,28 +155,38 @@
             </div>
         </section>
 
-        <!-- Performance Benefits -->
+        <!-- How We Addressed Earlier Limitations -->
         <section style="padding: 100px 0; background: white;">
             <div class="container">
-                <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 60px; font-weight: 600;">Performance Benefits</h2>
+                <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 60px; font-weight: 600;">How we addressed the Limitations</h2>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center;">
-                    <div class="benefit-card">
-                        <div style="font-size: 3rem; color: #11998e; margin-bottom: 20px;">🚀</div>
-                        <h3 style="color: #333; margin-bottom: 15px;">30% Faster</h3>
-                        <p style="color: #666;">Average improvement in processing speed compared to standard Kafka Streams implementations.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                    <div class="limitation-solution">
+                        <div class="solution-tag">Distributed</div>
+                        <div class="solution-content">
+                            <h3>Scaling up instances based on metrics only if needed</h3>
+                        </div>
                     </div>
                     
-                    <div class="benefit-card">
-                        <div style="font-size: 3rem; color: #11998e; margin-bottom: 20px;">💰</div>
-                        <h3 style="color: #333; margin-bottom: 15px;">40% Cost Reduction</h3>
-                        <p style="color: #666;">Lower resource consumption through intelligent optimization and better resource utilization.</p>
+                    <div class="limitation-solution">
+                        <div class="solution-tag">Hybrid</div>
+                        <div class="solution-content">
+                            <h3>Near Real-Time processing with Micro-Batching</h3>
+                        </div>
                     </div>
                     
-                    <div class="benefit-card">
-                        <div style="font-size: 3rem; color: #11998e; margin-bottom: 20px;">📈</div>
-                        <h3 style="color: #333; margin-bottom: 15px;">99.9% Uptime</h3>
-                        <p style="color: #666;">Enhanced fault tolerance and automatic recovery mechanisms ensure maximum availability.</p>
+                    <div class="limitation-solution">
+                        <div class="solution-tag">Event Balancing</div>
+                        <div class="solution-content">
+                            <h3>Balancing processing of events Asynchronously</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="limitation-solution">
+                        <div class="solution-tag">Scheduling</div>
+                        <div class="solution-content">
+                            <h3>Events are scheduled fairly for processing</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,119 +231,5 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    
-    <style>
-        .feature-point {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #11998e;
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-right: 20px;
-            margin-top: 5px;
-        }
-        
-        .feature-text h4 {
-            color: #11998e;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .feature-text p {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        .tech-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .tech-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .tech-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .tech-card h3 {
-            color: #333;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .tech-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .tech-card ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-        }
-        
-        .tech-card li {
-            color: #666;
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .tech-card li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #38ef7d;
-            font-weight: bold;
-        }
-        
-        .benefit-card {
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        @media (max-width: 768px) {
-            section[style*="grid-template-columns: 1fr 1fr"] {
-                display: block !important;
-            }
-            
-            section[style*="grid-template-columns: 1fr 1fr"] > div:first-child {
-                margin-bottom: 60px;
-            }
-            
-            .feature-point {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .feature-icon {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-    </style>
 </body>
 </html>

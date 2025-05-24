@@ -1,0 +1,183 @@
+/* Thulawa Page Specific Styles */
+
+.feature-point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #11998e;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.feature-text h4 {
+    color: #11998e;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feature-text p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tech-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.tech-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tech-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.tech-card li {
+    color: #666;
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tech-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #38ef7d;
+    font-weight: bold;
+}
+
+.benefit-card {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.limitation-solution {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.solution-tag {
+    background: #7f8c8d;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.solution-tag::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #7f8c8d;
+}
+
+.solution-content {
+    background: #f8f9fa;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.solution-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.solution-content h3 {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    section[style*="grid-template-columns: 1fr 1fr"] {
+        display: block !important;
+    }
+    
+    section[style*="grid-template-columns: 1fr 1fr"] > div:first-child {
+        margin-bottom: 60px;
+    }
+    
+    .feature-point {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .tech-card {
+        padding: 30px 20px;
+    }
+    
+    .solution-tag {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .solution-content {
+        padding: 25px 15px;
+    }
+    
+    .solution-content h3 {
+        font-size: 1rem;
+    }
+}
