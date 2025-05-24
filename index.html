@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thulawa</title>
+    <title>Stream Processing Engine - Real-time Data Processing</title>
     <meta name="description" content="Advanced stream processing engine for real-time data analytics and processing. See our interactive demo.">
     <meta name="keywords" content="stream processing, real-time analytics, data processing, big data">
     
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com">
     
-    <link rel="icon" href="../images/tabicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -23,12 +23,12 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>Thulawa</h2>
+                    <h2>StreamFlow</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="pages/demo.html" class="nav-link demo-link">Demo</a></li>
+                    <li><a href="pages/docs.html" class="nav-link">Docs</a></li>
+                    <li><a href="pages/demo.html" class="nav-link demo-link">Live Demo</a></li>
                     <li><a href="pages/about.html" class="nav-link">About</a></li>
                     <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -49,8 +49,8 @@
                     <h1 class="hero-title">Real-time Stream Processing</h1>
                     <p class="hero-subtitle">Process millions of data streams in real-time with our advanced stream processing engine</p>
                     <div class="hero-buttons">
-                        <a href="pages/demo.html" class="btn btn-primary">View Demo</a>
-                        <a href="pages/features.html" class="btn btn-secondary">Learn More</a>
+                        <a href="pages/demo.html" class="btn btn-primary">View Live Demo</a>
+                        <a href="pages/docs.html" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -76,30 +76,182 @@
             </div>
         </section>
 
-        <!-- Features Section -->
+        <!-- Literature Review Section -->
         <section id="features" class="features">
             <div class="container">
-                <h2 class="section-title">Why Choose Our Stream Processing Engine?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Real-time Processing</h3>
-                        <p>Process data streams with ultra-low latency and high throughput for instant insights.</p>
+                <h2 class="section-title">Literature Review</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Understanding the current landscape of stream processing frameworks and their limitations
+                </p>
+                
+                <div class="literature-content">
+                    <!-- Stream Processing Frameworks Overview -->
+                    <div class="framework-comparison">
+                        <h3 style="text-align: center; color: #333; margin-bottom: 40px; font-size: 1.8rem;">Current Stream Processing Landscape</h3>
+                        
+                        <div class="frameworks-grid">
+                            <div class="framework-card">
+                                <img src="/images/flinklogo.svg" alt="Apache Flink" class="framework-logo">
+                                <h4>Apache Flink</h4>
+                                <p>Excels in low-latency, real-time processing with advanced watermark concepts for handling out-of-order events</p>
+                                <div class="framework-strength">Low Latency</div>
+                            </div>
+                            
+                            <div class="framework-card">
+                                <img src="images/sparklogo.png" alt="Spark Streaming" class="framework-logo">
+                                <h4>Spark Streaming</h4>
+                                <p>Designed for heavy workloads with robust batch processing capabilities and fault tolerance</p>
+                                <div class="framework-strength">Heavy Workloads</div>
+                            </div>
+                            
+                            <div class="framework-card">
+                                <img src="images/kafkalogo.svg" alt="Kafka Streams" class="framework-logo">
+                                <h4>Kafka Streams</h4>
+                                <p>Lightweight library with seamless Kafka integration, ideal for event-driven applications</p>
+                                <div class="framework-strength">Simplicity</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Advanced Analytics</h3>
-                        <p>Built-in analytics capabilities for complex event processing and pattern detection.</p>
+
+                    <!-- Research Gap -->
+                    <div class="research-gap">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 80px;">
+                            <div>
+                                <h3 style="color: #11998e; font-size: 1.8rem; margin-bottom: 20px;">Research Gap Identified</h3>
+                                <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                                    While existing research has explored <strong>key-based partitioning</strong> for workload distribution across partitions, there is limited focus on optimizing parallel execution within partitions.
+                                </p>
+                                <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                                    Most studies focus on balancing workload between partitions, but there's <strong>less focus on parallelizing and distributing the workload within the partition</strong> and within the processing nodes.
+                                </p>
+                                <div class="research-highlight">
+                                    <strong>Our Contribution:</strong> This research addresses intra-partition parallelism to enhance throughput and efficiency.
+                                </div>
+                            </div>
+                            <div>
+                                <div class="limitation-visual">
+                                    <div class="current-approach">
+                                        <h4>Current Approach</h4>
+                                        <div class="partition-boxes">
+                                            <div class="partition-box">Partition 1</div>
+                                            <div class="partition-box">Partition 2</div>
+                                            <div class="partition-box">Partition 3</div>
+                                        </div>
+                                        <p>Focus on inter-partition distribution</p>
+                                    </div>
+                                    <div class="arrow-down">↓</div>
+                                    <div class="our-approach">
+                                        <h4>Thulawa Approach</h4>
+                                        <div class="enhanced-partition">
+                                            <div class="partition-header">Partition</div>
+                                            <div class="intra-processing">
+                                                <div class="process-unit">P1</div>
+                                                <div class="process-unit">P2</div>
+                                                <div class="process-unit">P3</div>
+                                            </div>
+                                        </div>
+                                        <p>Focus on intra-partition parallelism</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔧</div>
-                        <h3>Easy Integration</h3>
-                        <p>Simple APIs and connectors for seamless integration with your existing infrastructure.</p>
+
+                    <!-- Key Findings -->
+                    <div class="key-findings">
+                        <h3 style="text-align: center; color: #333; margin: 80px 0 40px; font-size: 1.8rem;">Key Research Findings</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                            <div class="finding-card">
+                                <div class="finding-icon">🔄</div>
+                                <h4>Integration Advantages</h4>
+                                <p>Frameworks like Apache Flink and Kafka are often used together to leverage their complementary strengths for scalable, fault-tolerant solutions.</p>
+                            </div>
+                            
+                            <div class="finding-card">
+                                <div class="finding-icon">⚡</div>
+                                <h4>Performance Variations</h4>
+                                <p>Different architectures handle completeness and correctness using different mechanisms - Flink uses watermarks while Kafka Streams uses persistent logging.</p>
+                            </div>
+                            
+                            <div class="finding-card">
+                                <div class="finding-icon">📊</div>
+                                <h4>Throughput Limitations</h4>
+                                <p>Current research focuses on key-based partitioning across partitions, leaving optimization opportunities within individual partitions unexplored.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📈</div>
-                        <h3>Scalable Architecture</h3>
-                        <p>Horizontally scalable design that grows with your data processing needs.</p>
+                </div>
+
+                <!-- References -->
+                <div class="references-section">
+                    <h4 style="color: #333; margin-bottom: 20px;">Key References</h4>
+                    <div class="references-list">
+                        <div class="reference-item">
+                            <span class="ref-number">[1]</span>
+                            <span class="ref-text">Akbar Sharief Shaik, "Advancements in Real-Time Stream Processing: A Comparative Study of Apache Flink, Spark Streaming, and Kafka Streams," International Journal of Computer Engineering and Technology, 2024.</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="ref-number">[2]</span>
+                            <span class="ref-text">Srijan Saket, Vivek Chandela, Md. Danish Kalim, "Real-time Event Joining in Practice With Kafka and Flink," 2024.</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="ref-number">[3]</span>
+                            <span class="ref-text">Tyler Akidau et al., "Watermarks in stream processing systems: Semantics and comparative analysis of apache flink and google cloud dataflow," Proceedings of the VLDB Endowment, 2021.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Objectives Section -->
+        <section class="research-objectives">
+            <div class="container">
+                <h2 class="section-title">Research Objectives</h2>
+                
+                <div class="objectives-flow">
+                    <!-- Objective 1 -->
+                    <div class="objective-flow-item left">
+                        <div class="objective-star">
+                            <span>★</span>
+                        </div>
+                        <div class="objective-box">
+                            <h3>Design an Execution Architecture for Enhanced Parallelism</h3>
+                            <p>Develop a new and improved execution model that enables fair and efficient parallel execution of events within partitions, to increase overall performance and throughput when compared to the traditional approach.</p>
+                        </div>
+                    </div>
+
+                    <!-- Objective 2 -->
+                    <div class="objective-flow-item right">
+                        <div class="objective-box">
+                            <h3>Implement a Fair and Efficient Asynchronous Processing Architecture</h3>
+                            <p>Efficiently process arriving events asynchronously, where an event with a certain key will not have to remain idle until an event with another key is still processing. Furthermore, preserving Key Ordering and events with the same key are not processed out of order.</p>
+                        </div>
+                        <div class="objective-star">
+                            <span>★</span>
+                        </div>
+                    </div>
+
+                    <!-- Objective 3 -->
+                    <div class="objective-flow-item left">
+                        <div class="objective-star">
+                            <span>★</span>
+                        </div>
+                        <div class="objective-box">
+                            <h3>Integrate the Architecture within Kafka Streams for Practical Applicability</h3>
+                            <p>Integrate and extend the Kafka Streams Library with our architecture with our own library for practical applicability. Additionally, upgrade Kafka Streams Library with Thulawa Library to Fetch, Schedule and Process records in an asynchronous manner.</p>
+                        </div>
+                    </div>
+
+                    <!-- Objective 4 -->
+                    <div class="objective-flow-item right">
+                        <div class="objective-box">
+                            <h3>Evaluate Throughput and Gains over Existing Stream Processing Models</h3>
+                            <p>Test the implementation of the proposed architecture against use cases and observe and validate the impact of the architecture to measure throughput improvements and performance gains.</p>
+                        </div>
+                        <div class="objective-star">
+                            <span>★</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,7 +305,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="pages/demo.html">Demo</a></li>
-                        <li><a href="pages/features.html">Features</a></li>
+                        <li><a href="pages/docs.html">Docs</a></li>
                         <li><a href="pages/about.html">About</a></li>
                         <li><a href="pages/contact.html">Contact</a></li>
                     </ul>

@@ -181,3 +181,25 @@
         font-size: 1rem;
     }
 }
+
+/* System Architecture Styles */
+.architecture-diagram-container {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.system-diagram {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.system-diagram:hover {
+    transform: scale(1.02);
+}
