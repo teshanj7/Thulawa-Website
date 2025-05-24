@@ -321,10 +321,368 @@ body {
     font-weight: 600;
 }
 
-/* Features Section */
+/* Features / Literature Review Section */
 .features {
     padding: 100px 0;
     background: white;
+}
+
+.literature-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Framework Comparison */
+.frameworks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.framework-card {
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.framework-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #11998e;
+}
+
+.framework-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.framework-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.framework-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.framework-strength {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Research Gap */
+.research-gap {
+    background: linear-gradient(135deg, rgba(17, 153, 142, 0.05), rgba(56, 239, 125, 0.05));
+    padding: 60px 40px;
+    border-radius: 20px;
+    border-left: 5px solid #11998e;
+}
+
+.research-highlight {
+    background: #11998e;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.limitation-visual {
+    text-align: center;
+}
+
+.current-approach, .our-approach {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.current-approach h4, .our-approach h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.partition-boxes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.partition-box {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.enhanced-partition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.partition-header {
+    background: #11998e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.intra-processing {
+    display: flex;
+    gap: 5px;
+}
+
+.process-unit {
+    background: #38ef7d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.arrow-down {
+    font-size: 2rem;
+    color: #11998e;
+    margin: 10px 0;
+}
+
+.current-approach p, .our-approach p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Key Findings */
+.key-findings {
+    margin-top: 80px;
+}
+
+.finding-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-left: 4px solid #11998e;
+}
+
+.finding-card:hover {
+    transform: translateY(-5px);
+}
+
+.finding-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.finding-card h4 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.finding-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* References */
+.references-section {
+    margin-top: 80px;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.references-section h4 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.references-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reference-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.ref-number {
+    background: #11998e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 35px;
+    text-align: center;
+}
+
+.ref-text {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Research Objectives Section */
+.research-objectives {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(17, 153, 142, 0.03), rgba(56, 239, 125, 0.03));
+}
+
+.objectives-flow {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Central flowing line */
+.objectives-flow::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #11998e 0%, #38ef7d 50%, #11998e 100%);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.objective-flow-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.objective-flow-item.left {
+    justify-content: flex-start;
+}
+
+.objective-flow-item.right {
+    justify-content: flex-end;
+}
+
+.objective-star {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(17, 153, 142, 0.3);
+    flex-shrink: 0;
+    z-index: 3;
+    position: relative;
+}
+
+.objective-box {
+    background: white;
+    border: 3px solid #11998e;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.objective-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(17, 153, 142, 0.2);
+}
+
+/* Connector lines from stars to boxes */
+.objective-flow-item.left .objective-box {
+    margin-left: 30px;
+}
+
+.objective-flow-item.right .objective-box {
+    margin-right: 30px;
+}
+
+/* Speech bubble arrows */
+.objective-flow-item.left .objective-box::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #11998e;
+}
+
+.objective-flow-item.right .objective-box::before {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #11998e;
+}
+
+.objective-box h3 {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.objective-box p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
 .features-grid {
@@ -482,4 +840,69 @@ body {
     border-top: 1px solid #555;
     color: #999;
     font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .frameworks-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .research-gap {
+        padding: 40px 25px;
+    }
+    
+    .research-gap > div {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    /* Research Objectives Mobile Styles */
+    .objectives-flow::before {
+        display: none;
+    }
+    
+    .objective-flow-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .objective-flow-item.left,
+    .objective-flow-item.right {
+        justify-content: center;
+    }
+    
+    .objective-flow-item.left .objective-box,
+    .objective-flow-item.right .objective-box {
+        margin: 20px 0 0 0;
+        max-width: 100%;
+    }
+    
+    .objective-box::before {
+        display: none;
+    }
+    
+    .objective-star {
+        position: relative;
+    }
 }
