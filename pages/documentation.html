@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Stream Processing Engine</title>
+    <meta name="description" content="Complete documentation for StreamFlow stream processing engine including API reference, tutorials, and guides.">
+    
+    <link rel="icon" href="images/tabicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>StreamFlow</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#features" class="nav-link">Features</a></li>
+                    <li><a href="demo.html" class="nav-link demo-link">Live Demo</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 70px;">
+        <section style="padding: 60px 0; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+            <div class="container">
+                <div style="text-align: center; color: white;">
+                    <h1 style="font-size: 3rem; margin-bottom: 20px; font-weight: 600;">Documentation</h1>
+                    <p style="font-size: 1.3rem; opacity: 0.9;">Everything you need to get started with StreamFlow</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 80px 0; background: white;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 250px 1fr; gap: 50px;">
+                    <!-- Sidebar Navigation -->
+                    <div>
+                        <div style="position: sticky; top: 90px;">
+                            <h3 style="color: #333; margin-bottom: 20px;">Quick Start</h3>
+                            <ul style="list-style: none; margin-bottom: 30px;">
+                                <li style="margin-bottom: 10px;"><a href="#getting-started" style="color: #11998e; text-decoration: none;">Getting Started</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#installation" style="color: #666; text-decoration: none;">Installation</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#first-stream" style="color: #666; text-decoration: none;">Your First Stream</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#configuration" style="color: #666; text-decoration: none;">Configuration</a></li>
+                            </ul>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">API Reference</h3>
+                            <ul style="list-style: none; margin-bottom: 30px;">
+                                <li style="margin-bottom: 10px;"><a href="#rest-api" style="color: #666; text-decoration: none;">REST API</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#websockets" style="color: #666; text-decoration: none;">WebSockets</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#sdks" style="color: #666; text-decoration: none;">SDKs</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#authentication" style="color: #666; text-decoration: none;">Authentication</a></li>
+                            </ul>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">Guides</h3>
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: 10px;"><a href="#tutorials" style="color: #666; text-decoration: none;">Tutorials</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#best-practices" style="color: #666; text-decoration: none;">Best Practices</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#troubleshooting" style="color: #666; text-decoration: none;">Troubleshooting</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#examples" style="color: #666; text-decoration: none;">Examples</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div>
+                        <div id="getting-started">
+                            <h2 style="color: #333; font-size: 2.2rem; margin-bottom: 30px;">Getting Started</h2>
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 30px;">
+                                Welcome to StreamFlow! This guide will help you get up and running with our stream processing engine in just a few minutes.
+                            </p>
+                            
+                            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 40px;">
+                                <h3 style="color: #11998e; margin-bottom: 15px;">Prerequisites</h3>
+                                <ul style="color: #666; line-height: 1.8;">
+                                    <li>Node.js 16+ or Python 3.8+</li>
+                                    <li>Basic understanding of streaming concepts</li>
+                                    <li>StreamFlow API key (sign up for free)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="installation" style="margin-top: 60px;">
+                            <h2 style="color: #333; font-size: 2.2rem; margin-bottom: 30px;">Installation</h2>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">Using npm</h3>
+                            <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <code style="color: #38ef7d; font-family: 'Courier New', monospace;">npm install streamflow-sdk</code>
+                            </div>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">Using pip</h3>
+                            <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <code style="color: #38ef7d; font-family: 'Courier New', monospace;">pip install streamflow-python</code>
+                            </div>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">Docker</h3>
+                            <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <code style="color: #38ef7d; font-family: 'Courier New', monospace;">docker run -p 8080:8080 streamflow/engine:latest</code>
+                            </div>
+                        </div>
+
+                        <div id="first-stream" style="margin-top: 60px;">
+                            <h2 style="color: #333; font-size: 2.2rem; margin-bottom: 30px;">Your First Stream</h2>
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 30px;">
+                                Let's create a simple stream that processes real-time events:
+                            </p>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">JavaScript Example</h3>
+                            <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <pre style="color: #e1e5e9; font-family: 'Courier New', monospace; margin: 0; overflow-x: auto;"><code>const StreamFlow = require('streamflow-sdk');
+
+const client = new StreamFlow({
+  apiKey: 'your-api-key',
+  region: 'us-west-2'
+});
+
+// Create a new stream
+const stream = client.createStream('user-events');
+
+// Process incoming events
+stream.process(event => {
+  console.log('Processing event:', event);
+  return {
+    userId: event.userId,
+    timestamp: Date.now(),
+    processed: true
+  };
+});
+
+// Start the stream
+stream.start();</code></pre>
+                            </div>
+                            
+                            <h3 style="color: #333; margin-bottom: 20px;">Python Example</h3>
+                            <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <pre style="color: #e1e5e9; font-family: 'Courier New', monospace; margin: 0; overflow-x: auto;"><code>from streamflow import StreamFlow
+
+client = StreamFlow(
+    api_key='your-api-key',
+    region='us-west-2'
+)
+
+# Create a new stream
+stream = client.create_stream('user-events')
+
+# Process incoming events
+def process_event(event):
+    print(f'Processing event: {event}')
+    return {
+        'user_id': event['user_id'],
+        'timestamp': time.time(),
+        'processed': True
+    }
+
+stream.process(process_event)
+stream.start()</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="configuration" style="margin-top: 60px;">
+                            <h2 style="color: #333; font-size: 2.2rem; margin-bottom: 30px;">Configuration</h2>
+                            
+                            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+                                <h3 style="color: #11998e; margin-bottom: 20px;">Environment Variables</h3>
+                                <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;">
+                                    <pre style="color: #e1e5e9; font-family: 'Courier New', monospace; margin: 0;"><code>STREAMFLOW_API_KEY=your-api-key
+STREAMFLOW_REGION=us-west-2
+STREAMFLOW_LOG_LEVEL=info
+STREAMFLOW_BATCH_SIZE=100</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
+                                <h3 style="color: #11998e; margin-bottom: 20px;">Configuration Options</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="background: #e1e5e9;">
+                                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Option</th>
+                                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Type</th>
+                                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Default</th>
+                                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 12px; border: 1px solid #ddd;"><code>batchSize</code></td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">number</td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">100</td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">Number of events to batch</td>
+                                        </tr>
+                                        <tr style="background: #f8f9fa;">
+                                            <td style="padding: 12px; border: 1px solid #ddd;"><code>timeout</code></td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">number</td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">5000</td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">Timeout in milliseconds</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; border: 1px solid #ddd;"><code>retries</code></td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">number</td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">3</td>
+                                            <td style="padding: 12px; border: 1px solid #ddd;">Number of retry attempts</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 80px; padding: 40px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); border-radius: 15px; text-align: center;">
+                            <h3 style="color: white; font-size: 1.8rem; margin-bottom: 15px;">Need Help?</h3>
+                            <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px;">Our team is here to help you succeed with StreamFlow</p>
+                            <div style="display: flex; gap: 20px; justify-content: center;">
+                                <a href="contact.html" class="btn" style="background: white; color: #11998e;">Contact Support</a>
+                                <a href="demo.html" class="btn" style="background: transparent; border: 2px solid white; color: white;">Try Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StreamFlow</h3>
+                    <p>Advanced stream processing for the modern world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="demo.html">Demo</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs.html">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StreamFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    
+    <style>
+        @media (max-width: 768px) {
+            section[style*="grid-template-columns: 250px 1fr"] {
+                display: block !important;
+            }
+            
+            section[style*="grid-template-columns: 250px 1fr"] > div:first-child {
+                margin-bottom: 40px;
+            }
+            
+            div[style*="position: sticky"] {
+                position: static !important;
+            }
+        }
+        
+        a[href^="#"] {
+            transition: color 0.3s ease;
+        }
+        
+        a[href^="#"]:hover {
+            color: #11998e !important;
+        }
+    </style>
+</body>
+</html>

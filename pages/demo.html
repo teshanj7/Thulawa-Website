@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Demo - Stream Processing Engine</title>
+    <meta name="description" content="Experience our stream processing engine in action with this interactive demonstration.">
+    
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>StreamFlow</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#features" class="nav-link">Features</a></li>
+                    <li><a href="demo.html" class="nav-link demo-link">Live Demo</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="demo-page">
+        <div class="demo-intro">
+            <div class="container">
+                <h1>Event Stream Processing (ESP)</h1>
+                <p>A computational paradigm that processes streams of events in real time.</p>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <div class="container">
+                <div class="demo-wrapper">
+                    <div class="demo-visual">
+                        <!-- Demo container will be populated by demo.js -->
+                        <div class="demo-content">
+                            <div class="demo-sections">
+                                <!-- Input Data Section -->
+                                <div class="section">
+                                    <h3 class="section-title">Input Data</h3>
+                                    <div class="input-data">
+                                        <div class="data-row">
+                                            <div class="data-square blue" data-type="blue">D1</div>
+                                            <div class="data-square blue" data-type="blue">D2</div>
+                                            <div class="data-square blue" data-type="blue">D3</div>
+                                        </div>
+                                        <div class="data-row">
+                                            <div class="data-square red" data-type="red">E1</div>
+                                            <div class="data-square red" data-type="red">E2</div>
+                                            <div class="data-square red" data-type="red">E3</div>
+                                        </div>
+                                        <div class="data-row">
+                                            <div class="data-square green" data-type="green">L1</div>
+                                            <div class="data-square green" data-type="green">L2</div>
+                                            <div class="data-square green" data-type="green">L3</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="arrow"></div>
+
+                                <!-- Processing Engine Section -->
+                                <div class="section">
+                                    <h3 class="section-title">Stream Processing Engine</h3>
+                                    <div class="processing-engine" id="processingEngine">
+                                        <div class="gear"></div>
+                                        <div class="gear"></div>
+                                    </div>
+                                </div>
+
+                                <div class="arrow"></div>
+
+                                <!-- Outputs Section -->
+                                <div class="section">
+                                    <h3 class="section-title">Outputs</h3>
+                                    <div class="outputs">
+                                        <div class="output-item analytics">📊 Analytics</div>
+                                        <div class="output-item output-stream">📤 Output Stream</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-explanation">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="explanation-grid">
+                    <div class="explanation-item">
+                        <div class="step-number">1</div>
+                        <h3>Data Ingestion</h3>
+                        <p>Multiple data streams are continuously ingested from various sources including databases, APIs, and real-time feeds.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <div class="step-number">2</div>
+                        <h3>Stream Processing</h3>
+                        <p>Our processing engine applies transformations, filters, and aggregations in real-time with ultra-low latency.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <div class="step-number">3</div>
+                        <h3>Output Generation</h3>
+                        <p>Processed data is delivered to analytics dashboards and downstream systems for immediate action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parallel Processing Limitations Section -->
+        <section class="parallel-processing-section">
+            <div class="container">
+                <h2>Parallel Processing Limitations</h2>
+                <p class="section-description">Understanding how partition count affects parallel processing capabilities in distributed stream processing systems.</p>
+                
+                <div class="parallel-demo-container">
+                    <div class="instance-container">
+                        <div class="instance" id="instance1">
+                            <h3>Instance 1</h3>
+                            <div class="instance-content">
+                                <div class="instance-layout">
+                                    <div class="left-section">
+                                        <h4>Topic T1</h4>
+                                        <div class="partitions">
+                                            <div class="partition" data-partition="0" data-target="consumer-1">Partition 0</div>
+                                            <div class="partition" data-partition="1" data-target="consumer-1">Partition 1</div>
+                                            <div class="partition" data-partition="2" data-target="consumer-1">Partition 2</div>
+                                            <div class="partition" data-partition="3" data-target="consumer-1">Partition 3</div>
+                                        </div>
+                                    </div>
+                                    <div class="right-section">
+                                        <h4>Consumer Group 1</h4>
+                                        <div class="consumers">
+                                            <div class="consumer" data-consumer="1" id="consumer-1">Consumer 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instance" id="instance2">
+                            <h3>Instance 2</h3>
+                            <div class="instance-content">
+                                <div class="instance-layout">
+                                    <div class="left-section">
+                                        <h4>Topic T1</h4>
+                                        <div class="partitions">
+                                            <div class="partition" data-partition="0" data-target="consumer-1">Partition 0</div>
+                                            <div class="partition" data-partition="1" data-target="consumer-2">Partition 1</div>
+                                            <div class="partition" data-partition="2" data-target="consumer-1">Partition 2</div>
+                                            <div class="partition" data-partition="3" data-target="consumer-2">Partition 3</div>
+                                        </div>
+                                    </div>
+                                    <div class="right-section">
+                                        <h4>Consumer Group 1</h4>
+                                        <div class="consumers">
+                                            <div class="consumer" data-consumer="1" id="consumer-1-inst2">Consumer 1</div>
+                                            <div class="consumer" data-consumer="2" id="consumer-2-inst2">Consumer 2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instance" id="instance3">
+                            <h3>Instance 3</h3>
+                            <div class="instance-content">
+                                <div class="instance-layout">
+                                    <div class="left-section">
+                                        <h4>Topic T1</h4>
+                                        <div class="partitions">
+                                            <div class="partition" data-partition="0" data-target="consumer-1">Partition 0</div>
+                                            <div class="partition" data-partition="1" data-target="consumer-2">Partition 1</div>
+                                            <div class="partition" data-partition="2" data-target="consumer-3">Partition 2</div>
+                                            <div class="partition" data-partition="3" data-target="consumer-4">Partition 3</div>
+                                        </div>
+                                    </div>
+                                    <div class="right-section">
+                                        <h4>Consumer Group 1</h4>
+                                        <div class="consumers">
+                                            <div class="consumer" data-consumer="1" id="consumer-1-inst3">Consumer 1</div>
+                                            <div class="consumer" data-consumer="2" id="consumer-2-inst3">Consumer 2</div>
+                                            <div class="consumer" data-consumer="3" id="consumer-3-inst3">Consumer 3</div>
+                                            <div class="consumer" data-consumer="4" id="consumer-4-inst3">Consumer 4</div>
+                                            <div class="consumer idle-consumer" data-consumer="5" id="consumer-5-inst3">Consumer 5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="limitation-highlight">
+                        <p><strong>Parallel processing is limited by the number of partitions in the topic</strong></p>
+                        <p><strong>Maximum parallelism = Number of partitions</strong></p>
+                    </div>
+                </div>
+
+                <div class="parallel-explanation">
+                    <h3>Understanding Partition-Consumer Relationships</h3>
+                    <p>In distributed stream processing systems like Apache Kafka, the degree of parallelism is fundamentally constrained by the number of partitions in a topic. This demonstration illustrates how consumer distribution changes as you scale up consumer instances:</p>
+                    
+                    <div class="explanation-points">
+                        <div class="point">
+                            <h4>Instance 1 - Single Consumer</h4>
+                            <p>One consumer handles all four partitions sequentially. While this works, it doesn't leverage the parallel processing capabilities that partitions enable.</p>
+                        </div>
+                        
+                        <div class="point">
+                            <h4>Instance 2 - Optimal Distribution</h4>
+                            <p>Two consumers share the load evenly, with each handling two partitions. This provides better throughput and fault tolerance while maintaining message ordering within partitions.</p>
+                        </div>
+                        
+                        <div class="point">
+                            <h4>Instance 3 - Resource Waste</h4>
+                            <p>With five consumers but only four partitions, Consumer 5 remains idle. This represents wasted computational resources and highlights the importance of partition planning.</p>
+                        </div>
+                    </div>
+
+                    <div class="best-practices">
+                        <h4>Best Practices for Partition Design</h4>
+                        <ul>
+                            <li><strong>Plan for Growth:</strong> Consider future scaling needs when determining partition count</li>
+                            <li><strong>Balance Load:</strong> Aim for partition counts that divide evenly among expected consumer instances</li>
+                            <li><strong>Consider Throughput:</strong> More partitions enable higher parallelism but increase complexity</li>
+                            <li><strong>Monitor Utilization:</strong> Track consumer lag and processing rates across partitions</li>
+                            <li><strong>Partition Key Strategy:</strong> Use appropriate partitioning keys to ensure even data distribution</li>
+                        </ul>
+                    </div>
+
+                    <div class="performance-impact">
+                        <h4>Performance Implications</h4>
+                        <p>The partition-consumer relationship directly impacts system performance. Under-partitioned topics create bottlenecks, while over-provisioned consumers waste resources. StreamFlow's intelligent partition management helps optimize this balance automatically, ensuring efficient resource utilization and maximum throughput for your streaming applications.</p>
+                    </div>
+
+                    <div class="solution-section">
+                        <h4>The Solution</h4>
+                        <p>To address these parallel processing limitations and optimize stream processing performance, we've developed an innovative approach. Our solution provides intelligent partition management and algorithmic optimization for better resource utilization.</p>
+                        
+                        <div class="solution-features">
+                            <ul>
+                                <li>Light-weight client library extending the Kafka Streams library</li>
+                                <li>Fetching and processing of Events done asynchronously</li>
+                                <li>Algorithmic approach when Scheduling, Micro-Batching and when increasing instances</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="solution-cta">
+                            <a href="thulawa.html" class="btn btn-solution">Learn More About Thulawa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StreamFlow</h3>
+                    <p>Advanced stream processing for the modern world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs.html">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StreamFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/demo.js"></script>
+</body>
+</html>
