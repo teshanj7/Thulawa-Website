@@ -169,15 +169,15 @@ function initializeContactForm() {
     
     // Load environment variables
     const emailjsConfig = {
-        publicKey: window.ENV?.EMAILJS_PUBLIC_KEY || 'fNPJZQRNdpj8NdSY7',
-        serviceId: window.ENV?.EMAILJS_SERVICE_ID || 'service_8i3aoi3',
-        templateId: window.ENV?.EMAILJS_TEMPLATE_ID || 'template_gf9iq3w'
+        publicKey: window.ENV?.EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY',
+        serviceId: window.ENV?.EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        templateId: window.ENV?.EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
     };
     
     // Check if environment variables are loaded
-    if (!window.ENV && (emailjsConfig.publicKey === 'fNPJZQRNdpj8NdSY7' || 
-                       emailjsConfig.serviceId === 'service_8i3aoi3' || 
-                       emailjsConfig.templateId === 'template_gf9iq3w')) {
+    if (!window.ENV && (emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY' || 
+                       emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
+                       emailjsConfig.templateId === 'YOUR_TEMPLATE_ID')) {
         console.warn('Environment variables not loaded. Please check your .env configuration.');
     }
     
@@ -198,9 +198,9 @@ function initializeContactForm() {
         }
         
         // Check if configuration is valid
-        if (emailjsConfig.publicKey === 'fNPJZQRNdpj8NdSY7' || 
-            emailjsConfig.serviceId === 'service_8i3aoi3' || 
-            emailjsConfig.templateId === 'template_gf9iq3w') {
+        if (emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY' || 
+            emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
+            emailjsConfig.templateId === 'YOUR_TEMPLATE_ID') {
             console.error('EmailJS configuration is not properly set');
             showMessage('error', '❌ Email service is not configured. Please contact the administrator.');
             return;
@@ -325,9 +325,19 @@ style.textContent = `
     .finding-card,
     .objective-box,
     .document-card {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .js-enabled .feature-card,
+    .js-enabled .use-case,
+    .js-enabled .framework-card,
+    .js-enabled .finding-card,
+    .js-enabled .objective-box,
+    .js-enabled .document-card {
         opacity: 0;
         transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
     }
     
     .feature-card.animate-in,
@@ -343,8 +353,14 @@ style.textContent = `
     .hero-title,
     .hero-subtitle,
     .hero-buttons {
-        opacity: 0;
+        opacity: 1;
         transition: opacity 0.6s ease;
+    }
+    
+    .js-enabled .hero-title,
+    .js-enabled .hero-subtitle,
+    .js-enabled .hero-buttons {
+        opacity: 0;
     }
     
     .header {
@@ -450,14 +466,17 @@ style.textContent = `
     }
     
     /* Loading States */
-    .js-enabled .feature-card,
-    .js-enabled .use-case,
-    .js-enabled .framework-card,
-    .js-enabled .finding-card,
-    .js-enabled .objective-box,
-    .js-enabled .document-card {
+    .hero-title,
+    .hero-subtitle,
+    .hero-buttons {
+        opacity: 1;
+        transition: opacity 0.6s ease;
+    }
+    
+    .js-enabled .hero-title,
+    .js-enabled .hero-subtitle,
+    .js-enabled .hero-buttons {
         opacity: 0;
-        transform: translateY(30px);
     }
     
     /* Smooth transitions for all interactive elements */
