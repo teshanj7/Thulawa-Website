@@ -167,23 +167,20 @@ function initializeContactForm() {
     
     if (!contactForm) return; // Exit if not on contact page
     
-    // Load environment variables
+    // EmailJS Configuration - Direct configuration without .env file
     const emailjsConfig = {
-        publicKey: window.ENV?.EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY',
-        serviceId: window.ENV?.EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-        templateId: window.ENV?.EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
+        publicKey: 'fNPJZQRNdpj8NdSY7',
+        serviceId: 'service_8i3aoi3',
+        templateId: 'template_gf9iq3w'
     };
-    
-    // Check if environment variables are loaded
-    if (!window.ENV && (emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY' || 
-                       emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
-                       emailjsConfig.templateId === 'YOUR_TEMPLATE_ID')) {
-        console.warn('Environment variables not loaded. Please check your .env configuration.');
-    }
     
     // Initialize EmailJS
     if (typeof emailjs !== 'undefined') {
         emailjs.init(emailjsConfig.publicKey);
+        console.log('EmailJS initialized successfully');
+    } else {
+        console.error('EmailJS library not loaded');
+        return;
     }
     
     // Form submission handler
@@ -194,15 +191,6 @@ function initializeContactForm() {
         if (typeof emailjs === 'undefined') {
             console.error('EmailJS is not loaded');
             showMessage('error', '❌ Email service is not available. Please try again later.');
-            return;
-        }
-        
-        // Check if configuration is valid
-        if (emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY' || 
-            emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
-            emailjsConfig.templateId === 'YOUR_TEMPLATE_ID') {
-            console.error('EmailJS configuration is not properly set');
-            showMessage('error', '❌ Email service is not configured. Please contact the administrator.');
             return;
         }
         
@@ -228,6 +216,8 @@ function initializeContactForm() {
             message: formData.get('message'),
             to_name: 'Thulawa Team'
         };
+        
+        console.log('Sending email with params:', templateParams);
         
         // Send email using EmailJS
         emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, templateParams)
