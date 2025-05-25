@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Demo - Stream Processing Engine</title>
+    <title>Methodology | Thulawa</title>
     <meta name="description" content="Experience our stream processing engine in action with this interactive demonstration.">
     
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/tabicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/demo.css">
@@ -17,14 +17,14 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>StreamFlow</h2>
+                    <h2>Thulawa</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../index.html#features" class="nav-link">Features</a></li>
-                    <li><a href="demo.html" class="nav-link demo-link">Live Demo</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="../pages/docs.html" class="nav-link">Docs</a></li>
+                    <li><a href="../pages/demo.html" class="nav-link demo-link">Demo</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="../pages/contacts.html" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -38,8 +38,8 @@
     <main class="demo-page">
         <div class="demo-intro">
             <div class="container">
-                <h1>Interactive Stream Processing Demo</h1>
-                <p>Watch data flow through our processing engine in real-time. Click on data squares to see them processed!</p>
+                <h1>Event Stream Processing (ESP)</h1>
+                <p>Vital paradigm for real-time data analytics, which has become essential for organizations that need to process continuous streams of events efficiently in real-time.</p>
             </div>
         </div>
 
@@ -102,22 +102,22 @@
 
         <div class="demo-explanation">
             <div class="container">
-                <h2>How It Works</h2>
+                <h2>How ESP Works</h2>
                 <div class="explanation-grid">
                     <div class="explanation-item">
                         <div class="step-number">1</div>
-                        <h3>Data Ingestion</h3>
-                        <p>Multiple data streams are continuously ingested from various sources including databases, APIs, and real-time feeds.</p>
+                        <h3>Raw Data Input</h3>
+                        <p>Multiple event streams are continuously ingested from various sources including databases, APIs, and real-time feeds.</p>
                     </div>
                     <div class="explanation-item">
                         <div class="step-number">2</div>
                         <h3>Stream Processing</h3>
-                        <p>Our processing engine applies transformations, filters, and aggregations in real-time with ultra-low latency.</p>
+                        <p>The processing engine applies transformations, filters, and aggregations in real-time.</p>
                     </div>
                     <div class="explanation-item">
                         <div class="step-number">3</div>
-                        <h3>Output Generation</h3>
-                        <p>Processed data is delivered to analytics dashboards and downstream systems for immediate action.</p>
+                        <h3>Meaningful Information Output</h3>
+                        <p>Processed data is delivered to analytics dashboards or downstream systems for related action.</p>
                     </div>
                 </div>
             </div>
@@ -214,7 +214,7 @@
 
                 <div class="parallel-explanation">
                     <h3>Understanding Partition-Consumer Relationships</h3>
-                    <p>In distributed stream processing systems like Apache Kafka, the degree of parallelism is fundamentally constrained by the number of partitions in a topic. This demonstration illustrates how consumer distribution changes as you scale up consumer instances:</p>
+                    <p>In distributed stream processing systems like Apache Kafka, the degree of parallelism is fundamentally constrained by the number of partitions in a topic. The above animation illustrates how partition/consumer distribution changes as you scale up consumer instances:</p>
                     
                     <div class="explanation-points">
                         <div class="point">
@@ -235,7 +235,7 @@
 
                     <div class="performance-impact">
                         <h4>Performance Implications</h4>
-                        <p>The partition-consumer relationship directly impacts system performance. Under-partitioned topics create bottlenecks, while over-provisioned consumers waste resources. StreamFlow's intelligent partition management helps optimize this balance automatically, ensuring efficient resource utilization and maximum throughput for your streaming applications.</p>
+                        <p>The partition-consumer relationship directly impacts system performance. Under-partitioned topics create bottlenecks, while over-provisioned consumers waste resources. Thulawa's efficient parallel processing capabilities helps optimize this balance automatically, ensuring efficient resource utilization and maximum throughput for your streaming applications.</p>
                     </div>
 
                     <div class="solution-section">
@@ -263,21 +263,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>StreamFlow</h3>
-                    <p>Advanced stream processing for the modern world.</p>
+                    <h3>Thulawa</h3>
+                    <p>Key-Aware Intra-Partition Parallelism extending Kafka Streams.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../pages/demo.html">Demo</a></li>
+                        <li><a href="../pages/docs.html">Docs</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 StreamFlow. All rights reserved.</p>
+                <p>&copy; 2025 Thulawa. All rights reserved ©.</p>
             </div>
         </div>
     </footer>
