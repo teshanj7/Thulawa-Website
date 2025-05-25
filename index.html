@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stream Processing Engine - Real-time Data Processing</title>
+    <title>Thulawa</title>
     <meta name="description" content="Advanced stream processing engine for real-time data analytics and processing. See our interactive demo.">
     <meta name="keywords" content="stream processing, real-time analytics, data processing, big data">
     
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com">
     
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/tabicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -23,14 +23,14 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>StreamFlow</h2>
+                    <h2>Thulawa</h2>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="pages/docs.html" class="nav-link">Docs</a></li>
-                    <li><a href="pages/demo.html" class="nav-link demo-link">Live Demo</a></li>
+                    <li><a href="pages/demo.html" class="nav-link demo-link">Demo</a></li>
                     <li><a href="pages/about.html" class="nav-link">About</a></li>
-                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="pages/contacts.html" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -46,11 +46,11 @@
         <section id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Real-time Stream Processing</h1>
-                    <p class="hero-subtitle">Process millions of data streams in real-time with our advanced stream processing engine</p>
+                    <h1 class="hero-title">Key-Aware Intra-Partition Parallelism</h1>
+                    <p class="hero-subtitle">Parallel event processing and fair scheduling of events for processing, ensuring improved throughput in high-performance environments.</p>
                     <div class="hero-buttons">
-                        <a href="pages/demo.html" class="btn btn-primary">View Live Demo</a>
-                        <a href="pages/docs.html" class="btn btn-secondary">Learn More</a>
+                        <a href="pages/demo.html" class="btn btn-primary">View Demo</a>
+                        <a href="pages/docs.html" class="btn btn-secondary">Docs</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -81,7 +81,7 @@
             <div class="container">
                 <h2 class="section-title">Literature Review</h2>
                 <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Understanding the current landscape of stream processing frameworks and their limitations
+                    Understanding the current landscape of stream processing frameworks in the present market and their limitations
                 </p>
                 
                 <div class="literature-content">
@@ -93,7 +93,7 @@
                             <div class="framework-card">
                                 <img src="/images/flinklogo.svg" alt="Apache Flink" class="framework-logo">
                                 <h4>Apache Flink</h4>
-                                <p>Excels in low-latency, real-time processing with advanced watermark concepts for handling out-of-order events</p>
+                                <p>Excels in low-latency, real-time processing with watermark concepts for handling out-of-order events</p>
                                 <div class="framework-strength">Low Latency</div>
                             </div>
                             
@@ -117,7 +117,7 @@
                     <div class="research-gap">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 80px;">
                             <div>
-                                <h3 style="color: #11998e; font-size: 1.8rem; margin-bottom: 20px;">Research Gap Identified</h3>
+                                <h3 style="color: #11998e; font-size: 1.8rem; margin-bottom: 20px;">Research Gap</h3>
                                 <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
                                     While existing research has explored <strong>key-based partitioning</strong> for workload distribution across partitions, there is limited focus on optimizing parallel execution within partitions.
                                 </p>
@@ -125,7 +125,7 @@
                                     Most studies focus on balancing workload between partitions, but there's <strong>less focus on parallelizing and distributing the workload within the partition</strong> and within the processing nodes.
                                 </p>
                                 <div class="research-highlight">
-                                    <strong>Our Contribution:</strong> This research addresses intra-partition parallelism to enhance throughput and efficiency.
+                                    <strong>Our Goal:</strong> Addressing real-time stream processing by integrating parallel event execution within partitions, fair event scheduling, and improved design architecture, addressing key limitations in existing Kafka Streams.
                                 </div>
                             </div>
                             <div>
@@ -188,16 +188,25 @@
                     <h4 style="color: #333; margin-bottom: 20px;">Key References</h4>
                     <div class="references-list">
                         <div class="reference-item">
-                            <span class="ref-number">[1]</span>
                             <span class="ref-text">Akbar Sharief Shaik, "Advancements in Real-Time Stream Processing: A Comparative Study of Apache Flink, Spark Streaming, and Kafka Streams," International Journal of Computer Engineering and Technology, 2024.</span>
                         </div>
                         <div class="reference-item">
-                            <span class="ref-number">[2]</span>
                             <span class="ref-text">Srijan Saket, Vivek Chandela, Md. Danish Kalim, "Real-time Event Joining in Practice With Kafka and Flink," 2024.</span>
                         </div>
                         <div class="reference-item">
-                            <span class="ref-number">[3]</span>
+                            <span class="ref-text">Yuriy Drohobytskiy, Vitaly Brevus and Yuriy Skorenkyy, "Spark Structured Streaming: Customizing Kafka Stream Processing," 2020 IEEE Third International Conference on Data Stream Mining & Processing, 2020.</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="ref-text">Zhenghe Wang, Wei Dai, Feng Wang and Hui Deng, "Kafka and Its Using in High-throughput and Reliable Message Distribution," 2015 8th International Conference on Intelligent Networks and Intelligent Systems, 2015.</span>
+                        </div>
+                        <div class="reference-item">
                             <span class="ref-text">Tyler Akidau et al., "Watermarks in stream processing systems: Semantics and comparative analysis of apache flink and google cloud dataflow," Proceedings of the VLDB Endowment, 2021.</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="ref-text">Muhammad Anis Uddin Nasir, Gianmarco De Francisci Morales, David Garcia-Soriano, Nicolas Kourtellis, Marco Serafini, "Partial Key Grouping: Load-Balanced Partitioning of Distributed Streams," 2015.</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="ref-text">Gang Liu, Zeting Wang, Amelie Chi Zhou and Rui Mao, "Adaptive key partitioning in distributed stream processing," CF Transactions on High Performance Computing, 2024.</span>
                         </div>
                     </div>
                 </div>
@@ -261,9 +270,9 @@
         <section class="demo-cta">
             <div class="container">
                 <div class="cta-content">
-                    <h2>See It In Action</h2>
-                    <p>Experience our stream processing engine with our interactive demonstration</p>
-                    <a href="pages/demo.html" class="btn btn-large">Launch Interactive Demo</a>
+                    <h2>Learn more about Thulawa</h2>
+                    <p>Learn more in detail about our key-aware parallel stream processing approach with our animated demonstration</p>
+                    <a href="pages/demo.html" class="btn btn-large">View Methodology</a>
                 </div>
             </div>
         </section>
@@ -271,23 +280,23 @@
         <!-- Use Cases Section -->
         <section class="use-cases">
             <div class="container">
-                <h2 class="section-title">Real-world Applications</h2>
+                <h2 class="section-title">Real-world Sectors where Thulawa can be used</h2>
                 <div class="use-cases-grid">
                     <div class="use-case">
                         <h3>Financial Services</h3>
-                        <p>Real-time fraud detection and risk analytics for banking and fintech applications.</p>
+                        <p>Real-time fraud detection and risk analytics for Banking and FinTech applications.</p>
                     </div>
                     <div class="use-case">
-                        <h3>IoT & Manufacturing</h3>
-                        <p>Process sensor data streams for predictive maintenance and quality control.</p>
+                        <h3>Healthcare</h3>
+                        <p>Real-time patient health/vital tracking, triggering real-time alerts for Healthcare applications.</p>
                     </div>
                     <div class="use-case">
                         <h3>E-commerce</h3>
                         <p>Real-time recommendation engines and inventory management systems.</p>
                     </div>
                     <div class="use-case">
-                        <h3>Gaming & Media</h3>
-                        <p>Live analytics for user behavior and content personalization.</p>
+                        <h3>Transportation</h3>
+                        <p>Process geospatial data for millions of passengers and drivers in transportation applications.</p>
                     </div>
                 </div>
             </div>
@@ -298,21 +307,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>StreamFlow</h3>
-                    <p>Advanced stream processing for the modern world.</p>
+                    <h3>Thulawa</h3>
+                    <p>Key-Aware Intra-Partition Parallelism extending Kafka Streams.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="pages/demo.html">Demo</a></li>
-                        <li><a href="pages/docs.html">Docs</a></li>
-                        <li><a href="pages/about.html">About</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/demo.html">Demo</a></li>
+                        <li><a href="../pages/docs.html">Docs</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 StreamFlow. All rights reserved.</p>
+                <p>&copy; 2025 Thulawa. All rights reserved ©.</p>
             </div>
         </div>
     </footer>

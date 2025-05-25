@@ -16,12 +16,12 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>StreamFlow</h2>
+                    <h2>Thulawa</h2>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../index.html#features" class="nav-link">Features</a></li>
-                    <li><a href="../demo.html" class="nav-link demo-link">Demo</a></li>
+                    <li><a href="../pages/docs.html" class="nav-link">Docs</a></li>
+                    <li><a href="../pages/demo.html" class="nav-link demo-link">Demo</a></li>
                     <li><a href="../pages/about.html" class="nav-link">About</a></li>
                     <li><a href="../pages/contacts.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -38,8 +38,8 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content" style="text-align: center;">
-                    <h1 class="hero-title">About StreamFlow</h1>
-                    <p class="hero-subtitle">Revolutionizing real-time data processing with cutting-edge stream processing technology</p>
+                    <h1 class="hero-title">About Thulawa</h1>
+                    <p class="hero-subtitle">Revolutionizing real-time data processing with Key-Aware Intra-Partition Parallelism extending Kafka Streams</p>
                 </div>
             </div>
         </section>
@@ -47,54 +47,38 @@
         <section style="padding: 100px 0; background: white;">
             <div class="container">
                 <div style="max-width: 800px; margin: 0 auto;">
-                    <h2 class="section-title">Our Mission</h2>
+                    <h2 class="section-title">Our Goal</h2>
                     <p style="font-size: 1.2rem; line-height: 1.8; color: #666; text-align: center; margin-bottom: 60px;">
-                        We believe that in today's fast-paced digital world, the ability to process and analyze data in real-time is not just an advantage—it's a necessity. Our mission is to democratize stream processing technology, making it accessible, reliable, and powerful for organizations of all sizes.
-                    </p>
-                </div>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Innovation First</h3>
-                        <p>We push the boundaries of what's possible in stream processing, constantly innovating to stay ahead of the curve.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Security & Reliability</h3>
-                        <p>Built with enterprise-grade security and reliability in mind, ensuring your data is always protected.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🌍</div>
-                        <h3>Global Scale</h3>
-                        <p>Designed to handle global-scale data processing with consistent performance across all regions.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💡</div>
-                        <h3>Ease of Use</h3>
-                        <p>Complex technology made simple. Our intuitive interfaces make stream processing accessible to everyone.</p>
-                    </div>
+                        In the present, Event Stream Processing (ESP) is a critical process for real-time data analytics, which enables 
+                        organizations to process and act on continuous streams of events. However, existing frameworks like Apache Kafka 
+                        Streams face limitations in efficiently parallelizing event processing, particularly parallelizing beyond individual 
+                        partitions, which can create performance bottlenecks in high-throughput scenarios. Our main goal is to overcome these
+                        limitations by design enhancements through a parallel processing design that significantly enhances stream 
+                        processing performance ⚡.
                 </div>
             </div>
         </section>
 
-        <section style="padding: 100px 0; background: #f8f9fa;">
+        <section style="padding: 80px 0; background: #f8f9fa;">
             <div class="container">
                 <h2 class="section-title">The Technology</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                     <div>
-                        <h3 style="font-size: 2rem; margin-bottom: 20px; color: #333;">Next-Generation Architecture</h3>
+                        <h3 style="font-size: 2rem; margin-bottom: 20px; color: #333;">Enhanced Architecture</h3>
                         <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
-                            Our stream processing engine is built on a revolutionary architecture that combines the best of traditional batch processing with real-time streaming capabilities.
+                           Our approach enhances processing throughput and event scheduling by introducing
+                        parallel event processing and fair scheduling of events for processing, ensuring improved 
+                        throughput in high-performance environments.
                         </p>
                         <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
-                            Using advanced algorithms and distributed computing principles, we achieve unprecedented performance while maintaining data consistency and fault tolerance.
+                            Thulawa was implemented by extending the Kafka Streams library. 
+                            The findings show substantial improvement in processing throughput when compared to Kafka Streams.
                         </p>
                         <ul style="color: #666; line-height: 1.8;">
-                            <li>Sub-millisecond latency processing</li>
-                            <li>Horizontal auto-scaling</li>
-                            <li>Built-in fault tolerance</li>
-                            <li>Schema evolution support</li>
+                            <li>Parallel Event Processing</li>
+                            <li>Fair Scheduling</li>
+                            <li>Micro-batch Processing</li>
+                            <li>Application Instance Scaling</li>
                         </ul>
                     </div>
                     <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 40px; border-radius: 20px; color: white; text-align: center;">
@@ -126,18 +110,16 @@
             <div class="container">
                 <h2 class="section-title">Our Story</h2>
                 <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 30px;">
-                        StreamFlow was born out of a simple observation: traditional data processing systems couldn't keep up with the demands of modern applications. Founded in 2023 by a team of distributed systems experts, we set out to build the stream processing engine we wished we had.
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 40px;">
+                        Thulawa was initiated by a team of undergraduate students at the Sri Lanka Institute of Information Technology (SLIIT) as their Research Project in 2024.
+                        The team, consisting of four members, aimed to address the limitations of existing stream processing frameworks by developing a novel approach that enhances parallel processing capabilities.
                     </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 30px;">
-                        Today, we're proud to serve companies ranging from innovative startups to Fortune 500 enterprises, helping them unlock the power of real-time data processing.
-                    </p>
-                    <div style="background: #f8f9fa; padding: 40px; border-radius: 15px; margin-top: 50px;">
-                        <blockquote style="font-size: 1.3rem; font-style: italic; color: #11998e; margin-bottom: 20px;">
-                            "The future belongs to organizations that can act on data as it happens, not after it's too late."
-                        </blockquote>
-                        <cite style="color: #666;">— StreamFlow Founding Team</cite>
+                    
+                    <!-- Team Photo -->
+                    <div style="margin: 50px 0;">
+                        <img src="../images/team-pic.jpeg" alt="Thulawa Research Team" style="width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); margin: 0 auto; display: block;">
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -147,29 +129,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>StreamFlow</h3>
-                    <p>Advanced stream processing for the modern world.</p>
+                    <h3>Thulawa</h3>
+                    <p>Key-Aware Intra-Partition Parallelism extending Kafka Streams.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="../demo.html">Demo</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="docs.html">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="../pages/demo.html">Demo</a></li>
+                        <li><a href="../pages/docs.html">Docs</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 StreamFlow. All rights reserved.</p>
+                <p>&copy; 2025 Thulawa. All rights reserved ©.</p>
             </div>
         </div>
     </footer>
