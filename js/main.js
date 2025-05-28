@@ -167,20 +167,23 @@ function initializeContactForm() {
     
     if (!contactForm) return; // Exit if not on contact page
     
-    // EmailJS Configuration - Direct configuration without .env file
+    // Load environment variables
     const emailjsConfig = {
-        publicKey: 'fNPJZQRNdpj8NdSY7',
-        serviceId: 'service_8i3aoi3',
-        templateId: 'template_gf9iq3w'
+        publicKey: window.ENV?.EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY',
+        serviceId: window.ENV?.EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        templateId: window.ENV?.EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
     };
+    
+    // Check if environment variables are loaded
+    if (!window.ENV && (emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY' || 
+                       emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
+                       emailjsConfig.templateId === 'YOUR_TEMPLATE_ID')) {
+        console.warn('Environment variables not loaded. Please check your .env configuration.');
+    }
     
     // Initialize EmailJS
     if (typeof emailjs !== 'undefined') {
         emailjs.init(emailjsConfig.publicKey);
-        console.log('EmailJS initialized successfully');
-    } else {
-        console.error('EmailJS library not loaded');
-        return;
     }
     
     // Form submission handler
@@ -191,6 +194,15 @@ function initializeContactForm() {
         if (typeof emailjs === 'undefined') {
             console.error('EmailJS is not loaded');
             showMessage('error', '❌ Email service is not available. Please try again later.');
+            return;
+        }
+        
+        // Check if configuration is valid
+        if (emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY' || 
+            emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
+            emailjsConfig.templateId === 'YOUR_TEMPLATE_ID') {
+            console.error('EmailJS configuration is not properly set');
+            showMessage('error', '❌ Email service is not configured. Please contact the administrator.');
             return;
         }
         
@@ -216,8 +228,6 @@ function initializeContactForm() {
             message: formData.get('message'),
             to_name: 'Thulawa Team'
         };
-        
-        console.log('Sending email with params:', templateParams);
         
         // Send email using EmailJS
         emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, templateParams)
@@ -482,6 +492,91 @@ style.textContent = `
     select:focus {
         outline: 2px solid #11998e;
         outline-offset: 2px;
+    }
+    
+    /* Title Section Styles */
+    .title-section {
+        padding: 80px 0 60px;
+        background: white;
+        border-bottom: 1px solid #e1e5e9;
+    }
+    
+    .research-title {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #333;
+        line-height: 1.3;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Abstract Section Styles */
+    .abstract-section {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+    
+    .abstract-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-left: 5px solid #11998e;
+    }
+    
+    .abstract-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    
+    .abstract-content p:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Responsive styles for new sections */
+    @media (max-width: 768px) {
+        .title-section {
+            padding: 60px 0 40px;
+        }
+        
+        .research-title {
+            font-size: 2rem;
+            padding: 0 20px;
+        }
+        
+        .abstract-section {
+            padding: 60px 0;
+        }
+        
+        .abstract-content {
+            padding: 30px 25px;
+            margin: 0 20px;
+        }
+        
+        .abstract-content p {
+            font-size: 1rem;
+            text-align: left;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .research-title {
+            font-size: 1.6rem;
+        }
+        
+        .abstract-content {
+            padding: 25px 20px;
+        }
     }
 `;
 

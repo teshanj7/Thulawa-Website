@@ -76,6 +76,35 @@
             </div>
         </section>
 
+        <!-- Title and Abstract Section -->
+        <section class="title-abstract">
+            <div class="container">
+                <!-- Project Title -->
+                <div class="project-title-section">
+                    <h1 class="project-title">Thulawa: Key-Aware Intra-Partition Parallelism extending Kafka Streams</h1>
+                </div>
+
+                <!-- Abstract Section -->
+                <div class="abstract-section">
+                    <h2 class="section-title">Abstract</h2>
+                    <div class="abstract-content">
+                        <p>
+                            In the present, Event Stream Processing (ESP) is a critical process for real-time data analytics, which enables organizations to process and act on continuous streams of events. However, existing frameworks like Apache Kafka Streams face limitations in efficiently parallelizing event processing, particularly parallelizing beyond individual partitions, which can create performance bottlenecks in high-throughput scenarios.
+                        </p>
+                        <p>
+                            To overcome these limitations in Kafka Streams, our research introduces design enhancements through a parallel processing design that significantly enhances stream processing performance. Our approach enhances processing throughput and event scheduling by introducing parallel event processing and fair scheduling of events for processing, ensuring improved throughput in high-performance environments.
+                        </p>
+                        <p>
+                            To overcome Kafka Streams' processing limitations, we designed an architecture where scheduling, event submission, and execution are handled in parallel. A dedicated scheduling mechanism handles fair scheduling events for processing independently, while also event submission and execution occur parallelly, ensuring optimal resource utilization and improved throughput.
+                        </p>
+                        <p>
+                            These enhancements were implemented within an extended Kafka Streams library, Kafka-Thulawa. The findings show substantial improvement in processing throughput when compared to Kafka Streams. This study advances real-time stream processing by integrating parallel event execution within partitions, fair event scheduling, and improved design architecture, addressing key limitations in existing Kafka Streams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Literature Review Section -->
         <section id="features" class="features">
             <div class="container">
@@ -270,6 +299,7 @@
         <section class="meet-team">
             <div class="container">
                 <h2 class="section-title">Meet the Team</h2>
+                <p class="team-intro">The brilliant minds behind Thulawa's innovative stream processing technology</p>
                 
                 <!-- Supervisors Row -->
                 <div class="supervisors-row">
